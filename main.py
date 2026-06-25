@@ -48,7 +48,7 @@ def employee_exit_prediction(input_data):
             df[col] = 0
 
     df = df[REQ_COLS]
-    df_scaled = StandardScaler.transform(df)
+    df_scaled = scaler.transform(df)
 
     prediction = loaded_model.predict(df_scaled)
 
