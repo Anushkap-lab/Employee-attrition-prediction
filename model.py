@@ -34,5 +34,5 @@ print("classification_report",classification_report(y_test,test_pred))
 import pickle
 
 pickle.dump(model,open("trained_model.sav",'wb'))
-pickle.dump(model,open("scaler.sav","wb"))
+pickle.dump(scaler,open("scaler.sav","wb"))
 
