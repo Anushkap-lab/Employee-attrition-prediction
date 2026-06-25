@@ -2,6 +2,7 @@ import numpy as np
 import pickle
 import streamlit as st
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
 
 # loading the saved model
@@ -47,7 +48,7 @@ def employee_exit_prediction(input_data):
             df[col] = 0
 
     df = df[REQ_COLS]
-    df_scaled = scaler.transform(df)
+    df_scaled = StandardScaler.transform(df)
 
     prediction = loaded_model.predict(df_scaled)
 
