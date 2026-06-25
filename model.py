@@ -17,7 +17,7 @@ enc_data=get_dummies(emp_data[X])
 X_train,X_test,y_train,y_test=train_test_split(enc_data,y,test_size=0.2,random_state=0)
 scaler=StandardScaler()
 X_trscaled=scaler.fit_transform(X_train)
-X_ttscaled=scaler.fit_transform(X_test)
+X_ttscaled=scaler.transform(X_test)
 model=LogisticRegression()
 model.fit(X_trscaled,y_train)
 
